@@ -8,7 +8,7 @@ import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import Particles from "react-tsparticles";
 import Clarifai from 'clarifai';
 
- // Clarifai API setup
+// Clarifai API setup
 const app = new Clarifai.App({
   apiKey: '72876add4fc5469998d8b1e86d2124a6'
 });
@@ -85,34 +85,30 @@ const particleOptions = {
   },
   detectRetina: true,
 }
-// const particlesInit = (main) => {
-//   // console.log(main);
-// };
-// const particlesLoaded = (container) => {
-//   // console.log(container);
-// };
 class App extends Component {
   constructor(){
     super();
     this.state = {
       input: '',
+      imageUrl: ''
     }
   }
 
   onInputChange = (event) => {
-    console.log(event.target.value)
+    this.setState({input: event.target.value});
   }
+
   onButtonSubmit = () => {
+    this.setState({imageUrl: this.state.input})
     console.log('click');
-    // console.log(Clarifai);
-    app.models.predict("a403429f2ddf4b49b307e318f00e528b",
-      "https://samples.clarifai.com/face-det.jpg").then(
+    app.models.predict(
+      Clarifai.FACE_DETECT_MODEL,
+      this.state.input).then(
       function(response){
-        // do something with repsonse
-        console.log(response);
+        console.log(response)
+        console.log(response.outputs[0].data.regions[0].region_info.bounding_box)
       },
       function(err){
-        // there was an error
       }
     );
   }
@@ -127,7 +123,7 @@ class App extends Component {
         onInputChange={this.onInputChange}
         onButtonSubmit={this.onButtonSubmit} 
       />
-      <FaceRecognition />
+      <FaceRecognition imageUrl={this.state.imageUrl} />
 
       <Particles 
         className="particles"
