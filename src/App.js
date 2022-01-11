@@ -14,7 +14,7 @@ const app = new Clarifai.App({
 });
 
 const particleOptions = {
-  fpsLimit: 60,
+  fpsLimit: 30,
   interactivity: {
     events: {
       onClick: {
@@ -68,9 +68,9 @@ const particleOptions = {
     number: {
       density: {
         enable: true,
-        area: 800,
+        area: 500,
       },
-      value: 80,
+      value: 40,
     },
     opacity: {
       value: 0.5,
