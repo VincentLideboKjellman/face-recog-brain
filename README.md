@@ -6,11 +6,11 @@ Using the Clarifai API for Machine learning models
 
 ## How to run:
 
-# Git clone repo
+### Git clone repo
 
-# npm install
+### npm install
 
-# npm start
+### npm start
 
 Go to your localhost:3000 to see the site
 
