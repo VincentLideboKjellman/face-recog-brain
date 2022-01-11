@@ -13,78 +13,78 @@ const app = new Clarifai.App({
   apiKey: '72876add4fc5469998d8b1e86d2124a6'
 });
 
-const particleOptions = {
-  fpsLimit: 30,
-  interactivity: {
-    events: {
-      onClick: {
-        enable: true,
-        mode: "repulse",
-      },
-      onHover: {
-        enable: true,
-        mode: "grab",
-      },
-      resize: true,
-    },
-    modes: {
-      bubble: {
-        distance: 400,
-        duration: 2,
-        opacity: 0.8,
-        size: 40,
-      },
-      push: {
-        quantity: 4,
-      },
-      repulse: {
-        distance: 200,
-        duration: 0.4,
-      },
-    },
-  },
-  particles: {
-    color: {
-      value: "#ffffff",
-    },
-    links: {
-      color: "#ffffff",
-      distance: 150,
-      enable: true,
-      opacity: 0.5,
-      width: 1,
-    },
-    collisions: {
-      enable: true,
-    },
-    move: {
-      direction: "none",
-      enable: true,
-      outMode: "bounce",
-      random: false,
-      speed: 2,
-      straight: false,
-    },
-    number: {
-      density: {
-        enable: true,
-        area: 500,
-      },
-      value: 40,
-    },
-    opacity: {
-      value: 0.5,
-    },
-    shape: {
-      type: "circle",
-    },
-    size: {
-      random: true,
-      value: 2,
-    },
-  },
-  detectRetina: true,
-}
+// const particleOptions = {
+//   fpsLimit: 60,
+//   interactivity: {
+//     events: {
+//       onClick: {
+//         enable: true,
+//         mode: "repulse",
+//       },
+//       onHover: {
+//         enable: true,
+//         mode: "grab",
+//       },
+//       resize: true,
+//     },
+//     modes: {
+//       bubble: {
+//         distance: 400,
+//         duration: 2,
+//         opacity: 0.8,
+//         size: 40,
+//       },
+//       push: {
+//         quantity: 4,
+//       },
+//       repulse: {
+//         distance: 200,
+//         duration: 0.4,
+//       },
+//     },
+//   },
+//   particles: {
+//     color: {
+//       value: "#ffffff",
+//     },
+//     links: {
+//       color: "#ffffff",
+//       distance: 150,
+//       enable: true,
+//       opacity: 0.5,
+//       width: 1,
+//     },
+//     collisions: {
+//       enable: true,
+//     },
+//     move: {
+//       direction: "none",
+//       enable: true,
+//       outMode: "bounce",
+//       random: false,
+//       speed: 2,
+//       straight: false,
+//     },
+//     number: {
+//       density: {
+//         enable: true,
+//         area: 800,
+//       },
+//       value: 80,
+//     },
+//     opacity: {
+//       value: 0.5,
+//     },
+//     shape: {
+//       type: "circle",
+//     },
+//     size: {
+//       random: true,
+//       value: 2,
+//     },
+//   },
+//   detectRetina: true,
+// }
  // console.log(response)
         // console.log(response.outputs[0].data.regions[0].region_info.bounding_box)
 class App extends Component {
@@ -147,10 +147,81 @@ class App extends Component {
 
       <Particles 
         className="particles"
-        id="tsparticles"
+        // id="tsparticles"
         // init={particlesInit}
         // loaded={particlesLoaded}
-        options={particleOptions}
+        options={
+          {
+          fpsLimit: 60,
+          interactivity: {
+            events: {
+              onClick: {
+                enable: true,
+                mode: "repulse",
+              },
+              onHover: {
+                enable: true,
+                mode: "grab",
+              },
+              resize: true,
+            },
+            modes: {
+              bubble: {
+                distance: 400,
+                duration: 2,
+                opacity: 0.8,
+                size: 40,
+              },
+              push: {
+                quantity: 4,
+              },
+              repulse: {
+                distance: 200,
+                duration: 0.4,
+              },
+            },
+          },
+          particles: {
+            color: {
+              value: "#ffffff",
+            },
+            links: {
+              color: "#ffffff",
+              distance: 150,
+              enable: true,
+              opacity: 0.5,
+              width: 1,
+            },
+            collisions: {
+              enable: true,
+            },
+            move: {
+              direction: "none",
+              enable: true,
+              outMode: "bounce",
+              random: false,
+              speed: 2,
+              straight: false,
+            },
+            number: {
+              density: {
+                enable: true,
+                area: 800,
+              },
+              value: 80,
+            },
+            opacity: {
+              value: 0.5,
+            },
+            shape: {
+              type: "circle",
+            },
+            size: {
+              random: true,
+              value: 2,
+            },
+          },
+          detectRetina: true,}}
       />
     </div>
     )
