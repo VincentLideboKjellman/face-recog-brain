@@ -14,11 +14,13 @@ Using the Clarifai API for Machine learning models
 
 Go to your localhost:3000 to see the site
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
 Site is deployed on Netlify:
 
 Try it out here: https://recog-brain.netlify.app/
+
+
+Todo: 
+
+Add login function and optimizations
+
+Add different Ai models and more labels
