@@ -4,9 +4,15 @@ A fullstack face recognition application. Upload images from an url to get them 
 
 Using the Clarifai API for Machine learning models
 
-## Available Scripts
+## How to run:
 
-In the project directory, you can run:
+# Git clone repo
+
+# npm install
+
+# npm start
+
+Go to your localhost:3000 to see the site
 
 ### `npm start`
 
