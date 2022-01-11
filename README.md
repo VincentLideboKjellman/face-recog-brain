@@ -1,6 +1,6 @@
 # Face Recog Brain
 
-A fullstack application to upload faces to be recognized by a ML-alghorithm. You gain score based on how many faces you have recognized compared to other users.
+A fullstack face recognition application. Upload images from computer or url to get them recognized by a ML-alghorithm. You gain score based on how many faces you have recognized compared to other users.
 
 ## Available Scripts
 
